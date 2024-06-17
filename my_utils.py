@@ -106,4 +106,5 @@ class calculate_metrics():
         print(f"{self.model.name}'s F1 Score (average):{self.F1_score['average_F1_score']:.3f}")
 
         return self.accuracy,self.F1_score
+
     
