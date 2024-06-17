@@ -55,11 +55,11 @@ class calculate_metrics():
             FP_k = np.sum(confusion_matrix[:, k]) - TP_k
             FN_k = np.sum(confusion_matrix[k, :]) - TP_k
     
-            precision_k = TP_k / (TP_k + FP_k) if (TP_k + FP_k) > 0 else 0
+            precision_k = (TP_k / (TP_k + FP_k)) if (TP_k + FP_k) > 0 else 0
             recall_k = TP_k / (TP_k + FN_k) if (TP_k + FN_k) > 0 else 0
     
-            precision_per_class.append(precision_k)
-            recall_per_class.append(recall_k)
+            precision_per_class.append(round(precision_k,3))
+            recall_per_class.append(round(recall_k,3))
     
             TP += TP_k
             FP += FP_k
