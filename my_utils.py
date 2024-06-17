@@ -2,6 +2,9 @@
 # Utility Functions and Classes for neural network model analysis and plotting routines
 # For use in the MNist_Digit_Classification.ipynb project ONLY
 
+import numpy as np
+import tensorflow as tf
+
 
 
 
@@ -91,6 +94,16 @@ class calculate_metrics():
         # convert raw logit results from output layer into a probability distribution
         self.accuracy = self.compute_accuracy()
         self.F1_score = self.compute_F1_score()
+
+        print(f'{self.model.name}\'s ACCURACY             :{self.accuracy:.3f}'  , end = '\n\n')
+        print(f'{self.model.name}\'s ERROR                :{1 - self.accuracy:.3f}'  , end = '\n\n')
+    
+        rounded_precisions = [round(num, 3) for num in self.F1_score['precision_per_class']]
+        print(f"{self.model.name}'s PRECISION (per class):{rounded_precisions}" ,end = '\n\n' )
+    
+        rounded_recalls = [round(num, 3) for num in self.F1_score['recall_per_class']]
+        print(f"{self.model.name}'s RECALL (per class):{rounded_precisions}",end = '\n\n'  )
+        print(f"{self.model.name}'s F1 Score (average):{self.F1_score['average_F1_score']:.3f}")
 
         return self.accuracy,self.F1_score
     
