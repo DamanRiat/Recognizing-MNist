@@ -1,4 +1,5 @@
 # MNIST Neural Network Classifier
+### Author: Damandeep Riat
 Welcome to my implementation of the  MNIST Neural Network Classifier. This project is designed to showcase the deep learning lifecycle through the complete process of developing a neural network model for multiclass classification using the MNIST database. The MNIST database contains 70,000 images of handwritten digits, each labeled with the corresponding digit from 0 to 9, providing an ideal dataset for practicing and refining image classification techniques.
 
 ## Repository Overview
