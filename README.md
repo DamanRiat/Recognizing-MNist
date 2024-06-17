@@ -39,12 +39,18 @@ Displaying confusion matrices to illustrate classification performance.
 To get started with this project, clone the repository and ensure all prerequisites are installed. Detailed documentation is provided to help you understand and replicate each step of the process that I took to achieve my results.
 
 ### Prerequisites
-Python 3
-TensorFlow 
-NumPy
-Matplotlib
-Scikit-learn
-Installation
+-Python 3
+
+-TensorFlow 
+
+-NumPy
+
+-Matplotlib
+
+-Scikit-learn
+
+-Installation
+
 
 
 
