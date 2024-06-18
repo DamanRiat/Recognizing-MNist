@@ -4,6 +4,7 @@
 
 import numpy as np
 import tensorflow as tf
+import random 
 
 
 
@@ -107,4 +108,7 @@ class calculate_metrics():
 
         return self.accuracy,self.F1_score
 
-    
+def set_seed(seed):
+    tf.random.set_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
